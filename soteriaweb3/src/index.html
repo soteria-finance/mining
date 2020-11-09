@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>soteria web3 对接实例</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">soteria web3 对接实例</h1>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <p>钱包地址： <span id="wallet"></span> | 网络：BSC测试网</p>
+
+          <p>矿币erc20地址：0xB48E1B16829C7f5Bd62B76cb878A6Bb1c4625D7A 
+            矿币余额:<span id="rbalance" style="color: red;">...</span>  
+          </p>
+          <p>抵押币erc20地址：0xc4CC602A7345518d0B7A84049d4Bc8575eBF3398</p>
+
+          <p>挖矿合约： 0xda54ecF5A234D6CD85Ce93A955860834aCA75878</p>
+          <hr>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <p class="text-warning">你可以通过下面的铸造一些测试币进行挖矿。</p>
+          <p class="text-danger">注意：此方法仅用于测试网测试！</p>
+          <p>
+            抵押币余额：<span id="sbalance">...</span>  <button id="mint" class="btn btn-primary" style="margin-left: 20px;">铸造测试币</button>
+          </p>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <p class="text-warning">[用户挖矿] 1. 充值。 </p>
+          <p class="text-danger">必须先Approve,再充值</p>
+          <p>正在挖矿数量：<span id="mbalance">...</span> </p>
+          <p>
+            抵押数量：
+            <input type="number" id="dAmout" placeholder="可以输入小数，如3.8">
+            <button id="approve" class="btn btn-primary" style="margin-left: 20px;">Approve</button>
+              <button id="deposit" class="btn btn-primary" style="margin-left: 20px;">充值</button>
+          </p>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <p class="text-warning">[用户挖矿] 2. 领取收益。</p>
+          <p>
+            <p>挖到的奖励：<span id="wbalance" style="color: blue;">...</span> </p>
+             
+            <button id="claim" class="btn btn-primary" style="margin-left: 20px;">领取</button>
+          </p>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <p class="text-warning">[用户挖矿] 3. 退出。</p>
+          <p>
+            <button id="exit" class="btn btn-primary" style="margin-left: 20px;">退出挖矿</button>
+          </p>
+          <hr>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
